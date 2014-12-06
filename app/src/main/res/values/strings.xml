@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SaludoPersonalizado</string>
+    <string name="app_name">InteracionConElementos</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="name">Nombre</string>
+    <string name="saludo">Sexo</string>
+    <string name="saludoSr">Sr.</string>
+    <string name="saludoSra">Sra.</string>
+    <string name="showTime">Mostrar tiempo</string>
+    <string name="hello">Saludos</string>
+    <string name="noNameMsg">Introduce tu nombre por favor</string>
+    <string name="salida"></string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="salidasaludo">...</string>
+    <string name="btnHola">Hola</string>
+    <string name="btnAdios">Adios</string>
 
 </resources>
