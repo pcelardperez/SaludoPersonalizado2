@@ -45,6 +45,7 @@ public class MainActivity extends Activity {
                     return;
                 }
                 String salutation = null;
+                String saludo = null;
                 String enteredName = text.getText().toString();
 
                 // referencia al radioButton sobre el sexo (Sr. o Sra.
@@ -56,7 +57,17 @@ public class MainActivity extends Activity {
                 }else{
                     salutation = getResources().getString(R.string.saludoSra).toLowerCase();
                 }
-                salutation = getResources().getString(R.string.hello) + " " + salutation + " " + enteredName;
+                //salutation = getResources().getString(R.string.hello) + " " + salutation + " " + enteredName;
+
+                //Creamos este RadioGroup para elegir entre Hola y Adios
+                RadioGroup radioHA = (RadioGroup)findViewById(R.id.RadioGroup02);
+                if (R.id.rdHola == radioHA.getCheckedRadioButtonId()){
+                    //para señor
+                    saludo = getResources().getString(R.string.EHola).toLowerCase();
+                }else{
+                    saludo = getResources().getString(R.string.EAdios).toLowerCase();
+                }
+                salutation = saludo + " " + salutation + " " + enteredName;
 
                 //Instancio el ChekBox de la hora y la fecha
                 // obtención de la hora y fecha

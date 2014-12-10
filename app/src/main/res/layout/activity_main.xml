@@ -54,6 +54,32 @@
                 android:layout_height="wrap_content"> </RadioButton>
 
         </RadioGroup>
+        <RadioGroup
+            android:id="@+id/RadioGroup02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/ESaludo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:text="@string/EHola"
+                android:id="@+id/rdHola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <RadioButton
+                android:text="@string/EAdios"
+                android:id="@+id/rdAdios"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"> </RadioButton>
+
+        </RadioGroup>
+
 
         <CheckBox
             android:text="@string/showTime"

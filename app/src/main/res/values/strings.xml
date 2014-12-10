@@ -16,5 +16,8 @@
     <string name="salidasaludo">...</string>
     <string name="btnHola">Hola</string>
     <string name="btnAdios">Adios</string>
+    <string name="ESaludo">Saludo</string>
+    <string name="EHola">Hola</string>
+    <string name="EAdios">Adios</string>
 
 </resources>
