@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 
 
     //BLOQUE 1.
+    //Comentario para hacer un commit del proyecto inicial para el examen de PMDM
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
