@@ -6,15 +6,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
@@ -25,6 +29,19 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Creamos el spinner adapter que te dará la opcion entre Hola y Adios
+        ArrayList<String> Saludo = new ArrayList<String>();
+        Saludo.add("Hola");
+        Saludo.add("Adios");
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item,Saludo);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
 
         //Instanciamos el boton
         Button button = (Button)findViewById(R.id.hello);
@@ -71,6 +88,7 @@ public class MainActivity extends Activity {
                 }
                 salutation = saludo + " " + salutation + " " + enteredName;
                 */
+
 
 
 
