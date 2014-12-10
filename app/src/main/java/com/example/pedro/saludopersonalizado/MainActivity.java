@@ -59,15 +59,20 @@ public class MainActivity extends Activity {
                 }
                 //salutation = getResources().getString(R.string.hello) + " " + salutation + " " + enteredName;
 
-                //Creamos este RadioGroup para elegir entre Hola y Adios
+                /*Creamos este RadioGroup para elegir entre Hola y Adios
+                Comentamos esta sección de codigo para intercambiarla por un spinner
+
                 RadioGroup radioHA = (RadioGroup)findViewById(R.id.RadioGroup02);
                 if (R.id.rdHola == radioHA.getCheckedRadioButtonId()){
-                    //para señor
+                    //para hola
                     saludo = getResources().getString(R.string.EHola).toLowerCase();
                 }else{
                     saludo = getResources().getString(R.string.EAdios).toLowerCase();
                 }
                 salutation = saludo + " " + salutation + " " + enteredName;
+                */
+
+
 
                 //Instancio el ChekBox de la hora y la fecha
                 // obtención de la hora y fecha
