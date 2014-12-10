@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-
+    String saludo;
     //BLOQUE 1.
     //Comentario para hacer un commit del proyecto inicial para el examen de PMDM
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //Creamos el spinner adapter que te dará la opcion entre Hola y Adios
+        //En este ArrayList están las opciones que aparecerán en el spinner
         ArrayList<String> Saludo = new ArrayList<String>();
         Saludo.add("Hola");
         Saludo.add("Adios");
@@ -38,10 +40,18 @@ public class MainActivity extends Activity {
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> adapter =new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item,Saludo);
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            public void onItemSelected(AdapterView<?>parentview, View selectedItemView, int position, long id){
+                saludo = parentview.getItemAtPosition(position).toString();
+            }
+
+            public void onNothingSelected(AdapterView<?>parentview){
+
+            }
+        });
 
         //Instanciamos el boton
         Button button = (Button)findViewById(R.id.hello);
@@ -62,7 +72,7 @@ public class MainActivity extends Activity {
                     return;
                 }
                 String salutation = null;
-                String saludo = null;
+
                 String enteredName = text.getText().toString();
 
                 // referencia al radioButton sobre el sexo (Sr. o Sra.
@@ -86,10 +96,10 @@ public class MainActivity extends Activity {
                 }else{
                     saludo = getResources().getString(R.string.EAdios).toLowerCase();
                 }
-                salutation = saludo + " " + salutation + " " + enteredName;
+
                 */
 
-
+                salutation = saludo + " " + salutation + " " + enteredName;
 
 
                 //Instancio el ChekBox de la hora y la fecha
